@@ -72,7 +72,7 @@ Public Class Form1
 
         Dim SUPER_NODO As New NODO
         SUPER_NODO.correlativo = identificador + 2
-        SUPER_NODO.id = "RAIZ"
+        SUPER_NODO.id = "EXPRESION"
         SUPER_NODO.layer = "."
         SUPER_NODO.hijo_izquierdo = TEMPORAL
         SUPER_NODO.hijo_derecho = finalizacion

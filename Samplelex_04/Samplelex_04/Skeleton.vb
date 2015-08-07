@@ -452,7 +452,7 @@ Public Class MyParser
 
                     Dim temporal As New NODO
                     temporal.correlativo = CONTADOR
-                    temporal.id = "FIN"
+                    temporal.id = "EXPRESION"
                     temporal.layer = "."
                     temporal.hijo_izquierdo = .Item(2).Data
                     temporal.hijo_derecho = hijo
