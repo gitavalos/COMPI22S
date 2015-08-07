@@ -1,0 +1,39 @@
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.exe.config
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.vbprojResolveAssemblyReference.cache
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.Form1.resources
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.Resources.resources
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.vbproj.GenerateResource.Cache
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.exe
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.pdb
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.xml
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\bin\Debug\GOLD Engine.dll
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\bin\Debug\GoldParser.dll
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.exe
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.xml
+C:\Users\USAC123\Desktop\4.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.pdb
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.exe.config
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.exe
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.pdb
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.xml
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\bin\Debug\GOLD Engine.dll
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\bin\Debug\GoldParser.dll
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.vbprojResolveAssemblyReference.cache
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.Form1.resources
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.Resources.resources
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.vbproj.GenerateResource.Cache
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.exe
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.xml
+C:\Users\CANTONIO\Desktop\5.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.pdb
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.exe.config
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.exe
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.xml
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.pdb
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.vbprojResolveAssemblyReference.cache
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.Form1.resources
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.Resources.resources
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\obj\Debug\Samplelex_04.vbproj.GenerateResource.Cache
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.exe
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.pdb
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\bin\Debug\Samplelex_04.xml
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\bin\Debug\GOLD Engine.dll
+C:\Users\CANTONIO\Desktop\V6.0\Samplelex_04\Samplelex_04\bin\Debug\GoldParser.dll

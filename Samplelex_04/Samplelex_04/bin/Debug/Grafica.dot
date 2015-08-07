@@ -1,0 +1,28 @@
+digraph G {
+50[label = "COMIENZO" ]
+50 -> 40
+
+40[label = "COMIENZO" ]
+40 -> 4
+
+4[label = "COMIENZO" ]
+4 -> 3
+
+3[label = "COMIENZO" ]
+3 -> 2
+
+2[label = "COMIENZO" ]
+2 -> 1
+
+1[label = "OPT" ]
+40 -> 39
+
+39[label = "OPT DEF" ]
+39 -> 38
+
+38[label = "SEC_DEF" ]
+38 -> 37
+
+37[label = "%Def%" ]
+
+}

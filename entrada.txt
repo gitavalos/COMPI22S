@@ -1,0 +1,38 @@
+%token%{[
+entero:int;
+simbolo,char:string;
+decimal: float;
+if:token;
+]}
+
+%def%{[
+numero->[0-9]+
+numdec->{numero}'.'{numero}
+expchar->\'.\'
+id -> [a-z]([a-z]|[0-9]|'_')*
+ayc->^a$c? 
+aoc->(a)c?  
+aconc->ac?
+if->'if'
+Vocal_a -> a*
+Vocal_a -> 'a'*
+prueba -> a*b
+letras -> [a-z]+
+vocales -> [aeiou]
+vocales_t -> ñoño \'letra u2tf8\'
+ansi1 -> '†' | 'ƒ'  .+
+hola->'hola'?
+hola->hola? 
+ansi1 -> † | ƒ  .+ ñ
+
+
+]}
+
+%reglas%{[
+{numero} [[simbolo(token.entero,yytext);]];
+{numdec} [[simbolo(token.decimal,yytext);]];
+{expchar} [[simbolo(token.char,yytext);]];
+{'if'} [[simbolo(token.if);]];
+{id} [[simbolo(token.simbolo,yytext);]];
+{.}  [[error(yycolumna+1,yyfila+1,yytext);]];
+]}

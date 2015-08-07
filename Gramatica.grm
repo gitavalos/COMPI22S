@@ -1,0 +1,171 @@
+﻿"Name" = 'Analizador Lexico'
+"Author" = 'Sergio Avalos'
+"Carnet" = '2011-14339'
+"Version" = '6.0'
+"About" = 'Practica #1 de lenguajes y compiladores 2, USAC 2do Semestre 2015'
+        
+
+        
+"Start Symbol" = <Inicio>
+         
+{WS}           = {Whitespace} - {CR} - {LF}
+{String Chars} = {Printable} +{Letter Extended} +{ANSI Mapped}+ {HT} - ['']
+               
+!---------------- Terminales---------------
+DIGITO = {Number}
+       
+LETRA = {Letter} | {Letter Extended} | {ANSI Mapped}
+           
+Whitespace    = {WS}+
+              
+NewLine       = {CR}{LF} | {CR} | {LF}  
+              
+TODOS = ['']{String Chars}+['']
+      
+SIMPLE = [\] ['']
+       
+BAJO = '_'
+              
+!----------------PRODUCCIONES INICIALES-------    
+                     
+!/////////////////////////////////////////            
+!-------------------PRE---------------
+<NEWLINE> ::= NewLine <NEWLINE>       
+          |  !Empty       
+!-----------------Gramatica------------------
+!/////////////////////////////////////////////
+<Inicio> ::= <NEWLINE> <COMIENZO> <NEWLINE>
+          
+<COMIENZO>::= <COMIENZO> <NEWLINE> <OPCION>
+           |<OPCION>
+           
+<OPCION>::=<TOKEN>
+         |<DEF>
+         |<REGLA>
+         |<OPCIONES>
+         
+!-----------OPCIONES----------------
+         
+<OPCIONES>::= '%caseSensitive'
+           | '%UTF8'
+           | '%ANSI'
+           
+!------------TOKEN---------------
+<TOKEN>::= '%TOKEN%'<NEWLINE>'{['<NEWLINE><TKN><NEWLINE>']}'
+        | '%TOKEN%'<NEWLINE>'{['<NEWLINE>']}'
+        
+<TKN>::=<TKN><NEWLINE><CUERPOTOKEN>':'<TIPOTKN>';'
+      |<CUERPOTOKEN>':'<TIPOTKN>';'
+      
+<CUERPOTOKEN>::=<CUERPOTOKEN> ','  <REP_MACRO>
+              | <REP_MACRO>
+      
+<TIPOTKN>::='Int'
+          |'Float'
+          |'String'
+          |'Token'   
+          
+!----------DEFINICIONES------------------- 
+
+<DEF>::= '%Def%'<NEWLINE>'{['<NEWLINE><BODY_DEF><NEWLINE>']}' 
+      | '%Def%'<NEWLINE>'{['<NEWLINE>']}' 
+      
+<BODY_DEF>::= <BODY_DEF> <REGULAR>
+           | <REGULAR>
+           
+<REGULAR>::= <REP_MACRO> '->' <EXPRESION> NewLine
+          
+<REP_MACRO>::= <REP_MACRO> DIGITO
+            | <REP_MACRO> LETRA
+            | <REP_MACRO> BAJO
+            | LETRA
+            
+<EXPRESION>::=<EXPRESION>'|' <B>
+      |<B>    
+
+<B>::= <B><EXP>
+     |<EXP>            
+            
+<EXP>::= <A> '*'
+      |<A> '?'
+      |<A> '+'
+      |<A>
+    
+<A>::='('<EXPRESION>')'
+    |'['<BODDY_CORCHETE>']'
+    |'{'<REP_MACRO>'}'
+    |'^'<EXPRESION>'$'
+    |<FIN>
+        
+<FIN>::= DIGITO
+    | LETRA
+    | TODOS
+    | '\n'
+    | '\r'
+    | '\"'
+    | '.'
+    | '[:ESPACIO:]'
+    | '[:BLANCO:]'
+    | SIMPLE
+    
+<BODDY_CORCHETE>::=<CADENA>
+       |<GUION>
+       
+<CADENA>::=<CADENA> <TERMINAL>
+         |<TERMINAL><TERMINAL>
+         
+<TERMINAL>::=DIGITO
+     |LETRA
+     
+<GUION>::=<GUION>DIGITO'-'DIGITO
+     |<GUION>LETRA'-'LETRA
+     |DIGITO '-' DIGITO
+     |LETRA '-' LETRA
+    
+      
+
+   
+!-------------REGLA-------------
+<REGLA>::='%Reglas%'<NEWLINE>'{['<NEWLINE><RGL><NEWLINE>']}'
+        | '%Reglas%'<NEWLINE>'{['<NEWLINE>']}'
+         
+<RGL>::=<RGL><NEWLINE><CRGL>
+      |<CRGL>
+      
+<CRGL>::= '{' <EXPRESION> '}' '[['<METODO>']];'
+       
+<METODO>::=<SIMBOLO>
+         |<ERROR>
+         
+<SIMBOLO> ::='simbolo('<BODY_SIMBOLO>');'
+                        
+<ERROR> ::= 'error('<VALNUM>','<VALNUM>','<VALVAL>');'
+         
+<VALNUM>::=<VALNUM>'+'<A1>
+         |<VALNUM>'-'<A1>
+         |<A1>
+         
+<A1>::=<A1>'*'<A2>
+     |<A1>'/'<A2>
+     |<A2>
+     
+<A2>::= 'yyfila'
+      |'yycolumna'
+      |'++'<AA>
+      |'--'<AA>
+      |DIGITO
+      |TTODOS
+      |LETRA
+      
+      
+<AA>::=<REP_MACRO>
+     |'yyfila'
+     |'yycolumna'
+         
+<BODY_SIMBOLO>::='token.'<REP_MACRO>','<VALVAL>
+       | 'token.'<REP_MACRO>
+       
+<VALVAL>::='yytexto'
+         |<CADENA>
+         |DIGITO
+         |LETRA
